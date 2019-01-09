@@ -122,6 +122,7 @@ ac_email_to_name = {}
 
 def get_ac_sac_email_names():
     ac_sac_email_names = {}
+    # Mapping between Names and email of AC and SACS
     with open('./Files/Email-NamesSAC&AC.tsv', 'r') as f:
         reader = csv.reader(f, delimiter='\t')
         for name, lastname, email, _, _ in reader:
@@ -137,6 +138,7 @@ ac_to_sac = {}
 
 def sac_to_ac_mapping():
     c = 0
+    # Mapping between Senior MetaReviewer and MetaReviewer
     with open('./Files/SMR__MR_mappings.txt') as f:
         reader = csv.reader(f, delimiter='\t')
         for row in reader:
